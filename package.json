@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "craco-alias": "^3.0.1",
+    "sass": "^1.77.4",
+    "sass-loader": "^14.2.1"
+  }
+}
