@@ -1,0 +1,27 @@
+.avatar-button {
+  padding: 5px 10px 2px 10px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(223, 223, 223);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.avatar-button:hover {
+  background-color: rgb(210, 207, 207);
+}
+
+.avatar-text p {
+  margin: 0px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+.avatar-image img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

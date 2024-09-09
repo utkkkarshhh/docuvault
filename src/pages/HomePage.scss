@@ -1,0 +1,14 @@
+.homepage {
+  margin: auto auto;
+  width: 90%;
+
+  &-head {
+    margin: 30px auto;
+
+    p {
+      font-size: 30px;
+      font-weight: 800;
+      margin: 0 10px 10px 10px 10px;
+    }
+  }
+}
