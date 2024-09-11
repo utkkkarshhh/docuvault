@@ -1,0 +1,11 @@
+.dv-link {
+    color: #0275d8;
+
+    &.dv-u-underline {
+        text-decoration: underline;
+    }
+
+    &.dv-u-bold {
+        font-weight: bold;
+    }
+}

@@ -4,10 +4,9 @@ import SolidButton from "@/components/UI/Buttons/SolidButton/SolidButton";
 import WhiteButton from "@/components/UI/Buttons/WhiteButton/WhiteButton";
 import LandingPageCard from "@/components/UI/Cards/LandingPageCard/LandingPageCard";
 import DocumentVector from "../assets/images/1376310.png";
-import { IoIosCloudDownload } from "react-icons/io";
+import { IoIosCloudDownload, IoMdCloudDone } from "react-icons/io";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { GiResize } from "react-icons/gi";
-import { IoMdCloudDone } from "react-icons/io";
 import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
 
@@ -141,7 +140,8 @@ export default function LandingPage() {
                 </a>
               </div>
               <p className="developer-bio">
-                BSc Computing and Information Technology @Queen's University Belfast, United Kingdom
+                BSc Computing and Information Technology @Queen's University
+                Belfast, United Kingdom
               </p>
             </div>
           </div>

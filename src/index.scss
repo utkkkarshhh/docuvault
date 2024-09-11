@@ -16,3 +16,77 @@ a{
   text-decoration: none;
   color: inherit;
 }
+
+$base-margin-multiplier: 0.25em;
+
+@function extract-number($value) {
+  @if type-of($value) == 'number' {
+    @return calc($value / 1);
+  }
+  @return 0;
+}
+
+
+$directions: top, bottom, right, left, x, y;
+
+@mixin u-marg-and-pad($level: 0, $direction: top, $applyMargin: true, $applyPadding: true, ) {
+  $value: extract-number($level) * $base-margin-multiplier;
+  @if $applyMargin == true {
+    @if $direction == x {
+      margin-left: $value;
+      margin-right: $value;
+    } @else if $direction == y {
+      margin-top: $value;
+      margin-bottom: $value;
+    } @else {
+      margin-#{$direction}: $value;
+    }
+  
+  }
+
+  @if $applyPadding == true {
+    @if $direction == x {
+      padding-left: $value;
+      padding-right: $value;
+    } @else if $direction == y {
+      padding-top: $value;
+      padding-bottom: $value;
+    } @else {
+      padding-#{$direction}: $value;
+    }
+   
+    }
+
+}
+
+
+@each $direction in $directions {
+@for $level from 1 through 50 {
+  .\+u-marg-#{$direction}-#{$level} {
+    @include u-marg-and-pad($level, $direction, true, false );
+  }
+
+  .\+u-pad-#{$direction}-#{$level} {
+    @include u-marg-and-pad($level, $direction, false, true );
+  }
+
+}
+}
+
+.\+u-pull-right {
+  float: right;
+}
+
+.\+u-valign-middle {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.\+u-bold {
+  font-weight: bold;
+}
+.c-page {
+  box-sizing: border-box;
+  min-height: 100vh;
+}
